@@ -1,0 +1,9 @@
+.card {
+  border-radius: 5px;
+  /* background-color: rgb(155, 120, 77); */
+  text-align: center;
+  padding: 10px 10px;
+  border: 1px solid black;
+  /* box-shadow: 5px 5px rgb(255, 118, 118); */
+}
+

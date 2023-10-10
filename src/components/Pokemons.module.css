@@ -1,0 +1,55 @@
+.modalPosition {
+  /* display: none; Hidden by default */
+  position: fixed;
+  z-index: 1; 
+  /* padding-top: 100px; */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  /* overflow: auto;  */
+  /* background-color: rgba(0,0,0,0.4); */
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  box-shadow: 5px 10px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+
+.close {
+  font-weight: 900;
+  font-size: 4rem;
+  rotate: 45deg;
+  cursor: pointer;
+}
+
+.search {
+  display: block;
+  width: 70vh;
+  padding: 15px;
+  margin: 50px auto 50px;
+  background-color: transparent;
+  box-shadow: 3px 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 1rem;
+}
