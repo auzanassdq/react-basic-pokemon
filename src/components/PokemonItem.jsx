@@ -1,50 +1,24 @@
-import styles from "./PokemonItem.module.css";
+import "./PokemonItem.css";
 
 function PokemonItem({ pokemon }) {
   return (
     <div
-      // className={styles.card}
       // onClick={itemClick}
+      className="pokemon-card"
       style={{
-        width: "300px",
-        borderRadius: "5px",
-        textAlign: "center",
-        padding: "20px",
-        // border: `2px solid ${pokemon.color}`,
-        // boxShadow: `5px 5px ${pokemon.color}`,
         backgroundColor: `${pokemon.color}`,
-        border: `2px solid black`,
-        boxShadow: `5px 5px black`,
       }}
     >
       <img src={pokemon.imageUrl} alt="" width={250} />
-      <h1
-        style={{
-          padding: "10px",
-        }}
-      >
-        {pokemon.name}
-      </h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          margin: "10px 0",
-        }}
-      >
+      <h1>{pokemon.name}</h1>
+      <div className="types-container">
         {pokemon.types.map((item, index) => (
           <>
             <span
               key={index}
+              className="type-badge"
               style={{
                 backgroundColor: colours[item.toLowerCase()],
-                padding: "4px",
-                color: "white",
-                width: "100px",
-                borderRadius: "8px",
-                border: "2px solid black",
-                fontSize: "1rem",
               }}
             >
               {item}
@@ -53,13 +27,7 @@ function PokemonItem({ pokemon }) {
         ))}
       </div>
 
-      <p
-        style={{
-          textAlign: "left",
-          margin: "10px",
-          fontSize: "1.3rem",
-        }}
-      >
+      <p className="description">
         {pokemon.description}
       </p>
     </div>
