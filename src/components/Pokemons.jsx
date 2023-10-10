@@ -6,8 +6,6 @@ import PokemonItem from "./PokemonItem";
 import styles from "./Pokemons.module.css";
 
 function Pokemons() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [pokemon, setPokemon] = useState({});
   const [pokemons] = useState(pokemonsJson);
   const [filterPokemons, setFilterPokemons] = useState(pokemonsJson);
 
@@ -26,35 +24,6 @@ function Pokemons() {
 
   return (
     <div>
- <div
-className={styles.modalPosition}
-style={{
-  display: isOpen ? "" : "none",
-  backgroundColor: pokemon.color,
-}}
->
-<div className={styles.modalHeader}>
-  <h1>{pokemon.name}</h1>
-  <div className={styles.close} onClick={() => setIsOpen(false)}>
-    +
-  </div>
-</div>
-
-<div className={styles.modalContent}>
-  <div>
-    <img src={pokemon.imageUrl} width={200} alt="" />
-  </div>
-  <div>
-    <p>Description :</p>
-    <p>{pokemon.description}</p>
-  </div>
-  <div>
-    <p>Genus :</p>
-    <p>{pokemon.genus}</p>
-  </div>
-</div>
-</div>
-
       <div className="list-pokemon">
         <input
           type="text"
@@ -82,5 +51,3 @@ style={{
 }
 
 export default Pokemons;
-
-
