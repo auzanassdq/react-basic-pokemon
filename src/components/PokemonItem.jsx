@@ -1,17 +1,12 @@
 import styles from "./PokemonItem.module.css";
 
-function PokemonItem({ pokemon, itemClick }) {
-  // console.log(pokemon);
-  const handleClick = () => {
-    console.log("tess");
-  };
-
+function PokemonItem({ pokemon }) {
   return (
     <div
       // className={styles.card}
-      onClick={itemClick}
+      // onClick={itemClick}
       style={{
-        width: '300px',
+        width: "300px",
         borderRadius: "5px",
         textAlign: "center",
         padding: "20px",
@@ -20,40 +15,53 @@ function PokemonItem({ pokemon, itemClick }) {
         backgroundColor: `${pokemon.color}`,
         border: `2px solid black`,
         boxShadow: `5px 5px black`,
-
       }}
     >
       <img src={pokemon.imageUrl} alt="" width={250} />
-      <p style={{
-        fontSize: "1.5rem",
-        padding: '10px'
-      }}>{pokemon.name}</p>
-      {pokemon.types.map((item, index) => (
-        <>
-          <span
-            key={index}
-            style={{
-              backgroundColor: colours[item.toLowerCase()],
-              padding: "4px",
-              margin: "10px",
-              color: "white",
-              width: "100px",
-              borderRadius: '8px',
-              border: "2px solid black",
-              display: "inline-block",
-              fontSize: '1rem'
-            }}
-          >
-            {item}
-          </span>
-          {/* <br /> */}
-        </>
-      ))}
-      <p style={{
-        textAlign: "left",
-        margin: "10px",
-        fontSize: "1.3rem"
-      }}>{pokemon.description}</p>
+      <h1
+        style={{
+          padding: "10px",
+        }}
+      >
+        {pokemon.name}
+      </h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          margin: "10px 0",
+        }}
+      >
+        {pokemon.types.map((item, index) => (
+          <>
+            <span
+              key={index}
+              style={{
+                backgroundColor: colours[item.toLowerCase()],
+                padding: "4px",
+                color: "white",
+                width: "100px",
+                borderRadius: "8px",
+                border: "2px solid black",
+                fontSize: "1rem",
+              }}
+            >
+              {item}
+            </span>
+          </>
+        ))}
+      </div>
+
+      <p
+        style={{
+          textAlign: "left",
+          margin: "10px",
+          fontSize: "1.3rem",
+        }}
+      >
+        {pokemon.description}
+      </p>
     </div>
   );
 }

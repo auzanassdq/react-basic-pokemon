@@ -17,10 +17,10 @@ function Pokemons() {
     setFilterPokemons(search);
   };
 
-  const itemClick = (item) => {
-    setPokemon(item);
-    setIsOpen(true);
-  };
+  // const itemClick = (item) => {
+  //   setPokemon(item);
+  //   setIsOpen(true);
+  // };
 
   return (
     <div>
@@ -40,7 +40,7 @@ function Pokemons() {
               <PokemonItem
                 key={item.id}
                 pokemon={item}
-                itemClick={() => itemClick(item)}
+                // itemClick={() => itemClick(item)}
               />
             ))
           )}
