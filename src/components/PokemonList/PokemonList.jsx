@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import pokemonsJson from "../data/pokemon.json";
-import PokemonItem from "./PokemonItem";
+import pokemonsJson from "../../data/pokemon.json";
+import PokemonItem from "../PokemonItem/PokemonItem";
 
-import styles from "./Pokemons.module.css";
+import "./PokemonList.css"
 
 function Pokemons() {
   const [pokemons] = useState(pokemonsJson);
@@ -29,10 +29,10 @@ function Pokemons() {
           type="text"
           placeholder="cari pokemon..."
           onChange={handleSearch}
-          className={styles.search}
+          className="search"
         />
 
-        <div className={styles.listContainer}>
+        <div className="list-container">
           {filterPokemons.length == 0 ? (
             <div>data tidak ditemukan</div>
           ) : (

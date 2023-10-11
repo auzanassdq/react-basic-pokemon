@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Pokemons from "./components/Pokemons";
+import Pokemons from "./components/PokemonList/PokemonList";
 import Login from "./components/Login";
 
 function App() {
