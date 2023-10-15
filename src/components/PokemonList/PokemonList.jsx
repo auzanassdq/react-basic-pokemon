@@ -3,7 +3,7 @@ import { useState } from "react";
 import pokemonsJson from "../../data/pokemon.json";
 import PokemonItem from "../PokemonItem/PokemonItem";
 
-import "./PokemonList.css"
+import "./PokemonList.css";
 
 function Pokemons() {
   const [pokemons] = useState(pokemonsJson);
@@ -24,27 +24,25 @@ function Pokemons() {
 
   return (
     <div>
-      <div className="list-pokemon">
-        <input
-          type="text"
-          placeholder="cari pokemon..."
-          onChange={handleSearch}
-          className="search"
-        />
+      <input
+        type="text"
+        placeholder="cari pokemon..."
+        onChange={handleSearch}
+        className="search"
+      />
 
-        <div className="list-container">
-          {filterPokemons.length == 0 ? (
-            <div>data tidak ditemukan</div>
-          ) : (
-            filterPokemons.map((item) => (
-              <PokemonItem
-                key={item.id}
-                pokemon={item}
-                // itemClick={() => itemClick(item)}
-              />
-            ))
-          )}
-        </div>
+      <div className="list-pokemon">
+        {filterPokemons.length == 0 ? (
+          <div>data tidak ditemukan</div>
+        ) : (
+          filterPokemons.map((item) => (
+            <PokemonItem
+              key={item.id}
+              pokemon={item}
+              // itemClick={() => itemClick(item)}
+            />
+          ))
+        )}
       </div>
     </div>
   );
