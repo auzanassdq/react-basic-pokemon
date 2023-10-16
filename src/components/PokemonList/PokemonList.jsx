@@ -27,8 +27,8 @@ function Pokemons() {
       <input
         type="text"
         placeholder="cari pokemon..."
-        onChange={handleSearch}
         className="search"
+        onChange={handleSearch}
       />
 
       <div className="list-pokemon">
