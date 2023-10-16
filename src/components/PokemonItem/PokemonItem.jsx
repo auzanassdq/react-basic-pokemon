@@ -14,23 +14,19 @@ function PokemonItem({ pokemon }) {
       <h1>{pokemon.name}</h1>
       <div className="types-container">
         {pokemon.types.map((item, index) => (
-          <>
-            <span
-              key={index}
-              className="type-badge"
-              style={{
-                backgroundColor: colours[item.toLowerCase()],
-              }}
-            >
-              {item}
-            </span>
-          </>
+          <span
+            key={index}
+            className="type-badge"
+            style={{
+              backgroundColor: colours[item.toLowerCase()],
+            }}
+          >
+            {item}
+          </span>
         ))}
       </div>
 
-      <p className="description">
-        {pokemon.description}
-      </p>
+      <p className="description">{pokemon.description}</p>
     </div>
   );
 }
